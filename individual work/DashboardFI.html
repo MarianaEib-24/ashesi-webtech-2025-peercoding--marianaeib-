@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Dashboard</title>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylish.css"
+  </head>
+  <script>
+    function goToCourseList() {
+      window.location.href = "CourseList.html";
+    }
+
+    function goToSessions() {
+      window.location.href = "Sessions.html";
+    }
+  </script>
+
+  <body>
+
+
+    <!-- <p>Welcome to your Dashboard</p>
+    <div>
+        <div id="intro">
+            <p> Choose your role</p>
+            <select name="role">
+                <option value="Faculty Intern" selected>FI</option>
+                <option value="Auditor">Auditor</option>
+                <option value="Observer">Observer</option>
+            </select>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="CourseList.html" target="_blank">Courses List</a></li>
+                <li><a href="Sessions.html" target="_blank">Sesions</a></li>
+                <li><p onclick="window.location.href=CourseList.html" style="cursor: pointer; color: greenyellow; text-decoration: underline;">Sessions</p></li>
+                <li></li><p>Reports</p></li>
+                <!-- <li></li><p>Portfolio</p></li>
+                <li></li><p>Contact</p></li>
+            </ul>
+        </div>
+
+    </div> -->
+
+
+    <!-- Dashboard section -->
+    <section id="DashboardFI">
+    <div>
+        <header>
+          <h2>FI Dashboard</h2>
+          <div id="intro">
+            <p> Choose your role</p>
+            <select name="role">
+                <option value="Faculty Intern" selected>FI</option>
+                <option value="Auditor">Auditor</option>
+                <option value="Observer">Observer</option>
+            </select>
+          </div>
+
+
+        </header>
+        <div class="side-menu">
+            <div class="school">
+                <h2 id="header">Ashesi University</h2>
+            </div>
+            <aside>
+              <ul>
+                  <li><a href="CourseList.html" style="cursor: pointer;color:black;">CourseList</li>
+                  <li><a href="Sessions.html" style="cursor: pointer;color:black;">Sessions</li>
+                  <li><a href="Reports.html" style="cursor: pointer; color:black;">Reports</li>
+              </ul>
+            </aside>
+        </div>
+    </div>
+    </section>
+  </body>
+</html>

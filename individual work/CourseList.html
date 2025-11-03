@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.1em;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+      }
+
+      .course-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .course-header {
+        background-color: #c41919;
+        padding: 20px;
+        color: white;
+      }
+
+      .course-header h2 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
+
+      .course-code {
+        font-size: 0.9em;
+        opacity: 0.9;
+      }
+
+      .course-content {
+        padding: 20px;
+      }
+
+      .course-info {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .info-label {
+        font-weight: 600;
+        color: #c41919;
+        min-width: 120px;
+        margin-right: 10px;
+      }
+
+      .info-value {
+        color: #555;
+        flex: 1;
+      }
+
+      .course-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #c41919;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .course-button:hover {
+        background-color: #ca4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Courses List</h1>
+      <p><em>View detailed information about all available courses</em></p>
+    </div>
+
+    <div class="container">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-header">
+          <h2>Algorithms and Design</h2>
+          <span class="course-code">CS501</span>
+        </div>
+        <div class="course-content">
+          <div class="course-info">
+            <span class="info-label">Students:</span>
+            <span class="info-value">45 students</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Class Hours:</span>
+            <span class="info-value">MWF 10:00 AM - 11:30 AM</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Lecturer:</span>
+            <span class="info-value">Dr. Asafo</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Assignments:</span>
+            <span class="info-value">8 assignments</span>
+          </div>
+          <button
+            class="course-button"
+            onclick="window.location.href='contact.html'"
+          >
+            View Course
+          </button>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-header">
+          <h2>Leadership IV</h2>
+          <span class="course-code">LEAD401</span>
+        </div>
+        <div class="course-content">
+          <div class="course-info">
+            <span class="info-label">Students:</span>
+            <span class="info-value">32 students</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Class Hours:</span>
+            <span class="info-value">TTh 2:00 PM - 3:30 PM</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Lecturer:</span>
+            <span class="info-value">Prof. Thompson</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Assignments:</span>
+            <span class="info-value">5 assignments</span>
+          </div>
+          <button
+            class="course-button"
+            onclick="window.location.href='contact.html'"
+          >
+            View Course
+          </button>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-header">
+          <h2>Data Structures</h2>
+          <span class="course-code">CS201</span>
+        </div>
+        <div class="course-content">
+          <div class="course-info">
+            <span class="info-label">Students:</span>
+            <span class="info-value">58 students</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Class Hours:</span>
+            <span class="info-label">MWF 1:00 PM - 2:30 PM</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Lecturer:</span>
+            <span class="info-value">Prof. Adwoa</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Assignments:</span>
+            <span class="info-value">10 assignments</span>
+          </div>
+          <button
+            class="course-button"
+            onclick="window.location.href='contact.html'"
+          >
+            View Course
+          </button>
+        </div>
+      </div>
+
+      <!-- Course 4 -->
+      <div class="course-card">
+        <div class="course-header">
+          <h2>Web Technology</h2>
+          <span class="course-code">CS301</span>
+        </div>
+        <div class="course-content">
+          <div class="course-info">
+            <span class="info-label">Students:</span>
+            <span class="info-value">52 students</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Class Hours:</span>
+            <span class="info-label">TTh 10:00 AM - 11:30 AM</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Lecturer:</span>
+            <span class="info-value">Dr. Michael </span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Assignments:</span>
+            <span class="info-value">12 assignments</span>
+          </div>
+          <button
+            class="course-button"
+            onclick="window.location.href='contact.html'"
+          >
+            View Course
+          </button>
+        </div>
+      </div>
+
+      <!-- Course 5 -->
+      <div class="course-card">
+        <div class="course-header">
+          <h2>Database Systems</h2>
+          <span class="course-code">CS401</span>
+        </div>
+        <div class="course-content">
+          <div class="course-info">
+            <span class="info-label">Students:</span>
+            <span class="info-value">40 students</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Class Hours:</span>
+            <span class="info-label">MWF 3:00 PM - 4:30 PM</span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Lecturer:</span>
+            <span class="info-value">Prof. Sarah </span>
+          </div>
+          <div class="course-info">
+            <span class="info-label">Assignments:</span>
+            <span class="info-value">9 assignments</span>
+          </div>
+          <button
+            class="course-button"
+            onclick="window.location.href='contact.html'"
+          >
+            View Course
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

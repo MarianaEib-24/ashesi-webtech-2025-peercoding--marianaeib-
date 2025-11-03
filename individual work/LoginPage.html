@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>LogIn</title>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylish.css"
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+
+  <script>
+    // function goToDashboard() {
+    //   window.location.href = "DashboardFI.html";
+    // }
+
+    function goToSessions() {
+      window.location.href = "Sessions.html";
+    }
+
+    //this fetches the data from the json file and assigns it to the variable usersData
+    // fetch("users.json")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     usersData = data.users;
+    //   });
+
+    // function validateLogin() {
+    //   user = document.getElementById("username").value;
+    //   passcode = document.getElementById("password").value;
+    //   for (let i = 0; i < 5; i++) {
+    //     if (username) {
+    //       if (
+    //         user == usersData[i].username.value &&
+    //         passcode == usersData[i].password.value
+    //       ) {
+    //         showAlert("Login successful");
+    //         goToDashboard();
+    //       } else {
+    //         showAlert("COuld not find user,enter correct credentials");
+    //       }
+    //     } else {
+    //       showAlert("Enter the field");
+    //     }
+    //   }
+    // }
+  </script>
+
+  <body class="login-body">
+    <h1 id="header">Ashesi University</h1>
+    <!-- Login Section  -->
+    <section id="Login" class="active">
+      <div class="login-container">
+        <h1>Welcome to your Login Dashboard</h1>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button id="loginBtn">Login</button>
+        <!-- <button onclick=goToDashboard()>Login</button> -->
+      </div>
+    </section>
+
+    <!-- <p>Welcome to your Dashboard</p>
+    <div>
+        <div id="intro">
+            <p> Choose your role</p>
+            <select name="role">
+                <option value="Faculty Intern" selected>FI</option>
+                <option value="Auditor">Auditor</option>
+                <option value="Observer">Observer</option>
+            </select>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="CourseList.html" target="_blank">Courses List</a></li>
+                <li><a href="Sessions.html" target="_blank">Sesions</a></li>
+                <li><p onclick="window.location.href=CourseList.html" style="cursor: pointer; color: greenyellow; text-decoration: underline;">Sessions</p></li>
+                <li></li><p>Reports</p></li>
+                <!-- <li></li><p>Portfolio</p></li>
+                <li></li><p>Contact</p></li>
+            </ul>
+        </div>
+
+    </div> -->
+
+    <!-- <div class="side-menu">
+        <div class="school">
+            <h1>Ashesi University</h1>
+        </div>
+        <ul>
+            <li>Courses List</li>
+            <li>Sessions</li>
+            <li>Reports</li>
+        </ul>
+    </div> -->
+
+    <!-- Dashboard section -->
+    <!-- <section id="FIDashboard">
+      <div>
+        <header>
+          <h2>FI Dashboard</h2>
+          <nav>
+            <button>Courses</button>
+            <button>Session</button>
+            <button>Reports</button>
+          </nav>
+        </header>
+      </div>
+    </section> -->
+    <script src="LoginScript.js" defer></script>
+  </body>
+</html>

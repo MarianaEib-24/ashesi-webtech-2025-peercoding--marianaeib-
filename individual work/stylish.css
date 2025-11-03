@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#header{
+    color: rgb(249, 242, 242);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top:5%
+
+
+}
+
+
+#Login{
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+    height : 100vh;
+    background: linear linear-gradient(to right,pink,green);
+    
+}
+
+
+.login-container{
+    background-color: rgb(183, 25, 25);
+    text-align:center;
+    width : 400px;
+    padding: 50px;
+    border-radius: 20px;
+    gap : 20px;
+    box-shadow:0 4px 15px rgb(0,0,0,0.9);
+    margin-top:5%;
+    margin-bottom: 20%;
+    height : 75vh;
+}
+
+
+.login-container input{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid black;
+
+}
+
+.login-container button{
+    width: 150px;
+    border-radius: 10px;
+    height: 5vh;
+    text-decoration:none;
+    cursor: pointer;
+    
+
+}
+
+.login-container h1{
+    color: white;
+    text-align:center;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+.login-container p{
+    margin-top: 20px; 
+    text-align: center;
+    color: aliceblue;
+}
+
+.login-container a{
+    color: #0becc6; 
+    text-decoration: underline; 
+    cursor: pointer;
+
+}
+
+header{
+    background: linear-gradient(to right,red,pink);
+    padding : 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    color:white;
+
+}
+
+.side-menu{
+    position: fixed;
+    background: linear-gradient(to right,white,blue);
+    width: 20vw;
+    min-height: 100vh;
+    display : flex;
+    flex-direction: column;
+    
+}
+
+.side-menu li{
+    font-size: 24px;
+    font-weight:bold;
+    /* text-align: center; */
+    padding: 30px 40px;
+    color: bisque;
+    display:flex;
+    align-items: center;
+}
+.side-menu li:hover{
+    background: white;
+    color: rgb(234, 130, 147);
+
+}
+
+.nav{
+    display: block;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style:none;
+}
+
+/* li a:hover {
+    background-color: rgb(114, 3, 5);
+} */
+
+container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #c8a353;
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
+  min-width: 250px;
+  text-align: center;
+  animation: fadeIn 0.10s ease-in;
+}
+
+.register-body {
+  background-image: url('ashesi background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.login-body {
+  background-image: url('ashesi background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#intro{
+    /* margin-top: 5%; */
+    margin-left: 90%;
+    /* margin-right: 10%; */
+    width: 10%;
+    background-color: #f55858;
+    }
+
+
+
+
+/* 
+                
+
+
+
+                
+                #intro{
+                    margin-top: 5%;
+                    margin-left: 90%;
+                    margin-right: 10%;
+                    width: 100%;
+                    background-color: #c8a353;
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 200px;
+                    background-color: #f1f1f1;
+                }
+
+
+
+    body{
+    min-height: 100vh;
+}
+
+
+
+
+
+
+     */

@@ -1,0 +1,23 @@
+{
+    "users" : [
+    {"username": "mari.eib",
+        "password":"12345"
+    },
+    {
+      "username": "solomon.ayitey",
+        "password":"bighead"  
+    },
+    {
+      "username": "barbie.marie",
+        "password":"54321"  
+    },
+    {
+      "username": "kgasaafo.maafo",
+        "password":"45678"  
+    },
+    {
+      "username": "julia.aryee",
+        "password":"67890"  
+    }
+]
+}
