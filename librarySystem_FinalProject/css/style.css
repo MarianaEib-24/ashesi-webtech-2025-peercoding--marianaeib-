@@ -1,0 +1,45 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height:28px;
+}
+
+.right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.right-div ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.right-div li {
+    list-style-type: none;
+    padding: 20px 30px;
+    font-weight: 600;
+}
+
+
+.menu-section {
+    background-color: #f7f7f7;
+    border-bottom:5px solid #9170E4;
+    width:100%
+}
+
+.navbar {
+    min-height: 90px;
+    margin-bottom: 0px;
+   
+}
+
+.navbar-brand{
+    float :left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
