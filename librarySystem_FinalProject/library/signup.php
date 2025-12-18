@@ -9,11 +9,53 @@ $msg_content = "";
 $msg_type = "";
 
 if (isset($_POST['signup'])) {
-    // Signup Logic Placeholder
-    // Example: If successful
-    // $msg_title = "Success!";
-    // $msg_content = "You are successfully registered.";
-    // $msg_type = "success";
+    // Code for student ID
+    $count_my_page = ("studentid.txt");
+    $hits = file($count_my_page);
+    $hits[0]++;
+    $fp = fopen($count_my_page, "w");
+    fputs($fp, "$hits[0]");
+    fclose($fp);
+    $StudentId = "SID" . $hits[0];
+    
+    $fname = $_POST['fullname'];
+    $mobileno = $_POST['mobileno'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $status = 1;
+    
+    // Check for duplicate email
+    $sql_check = "SELECT EmailId FROM tblstudents WHERE EmailId=:email";
+    $query_check = $dbh->prepare($sql_check);
+    $query_check->bindParam(':email', $email, PDO::PARAM_STR);
+    $query_check->execute();
+    
+    if($query_check->rowCount() > 0) {
+        $msg_title = "Error";
+        $msg_content = "Email already registered! Please use a different email.";
+        $msg_type = "error";
+    } else {
+        $sql = "INSERT INTO tblstudents(StudentId,FullName,MobileNumber,EmailId,Password,Status) VALUES(:StudentId,:fname,:mobileno,:email,:password,:status)";
+        $query = $dbh->prepare($sql);
+        $query->bindParam(':StudentId', $StudentId, PDO::PARAM_STR);
+        $query->bindParam(':fname', $fname, PDO::PARAM_STR);
+        $query->bindParam(':mobileno', $mobileno, PDO::PARAM_STR);
+        $query->bindParam(':email', $email, PDO::PARAM_STR);
+        $query->bindParam(':password', $password, PDO::PARAM_STR);
+        $query->bindParam(':status', $status, PDO::PARAM_STR);
+        $query->execute();
+        $lastInsertId = $dbh->lastInsertId();
+        
+        if ($lastInsertId) {
+            $msg_title = "Success!";
+            $msg_content = "Your Registration was successful. Your Student ID is " . $StudentId;
+            $msg_type = "success";
+        } else {
+            $msg_title = "Error";
+            $msg_content = "Something went wrong. Please try again.";
+            $msg_type = "error";
+        }
+    }
 }
 ?>
 
@@ -21,10 +63,17 @@ if (isset($_POST['signup'])) {
 
     <div class="content-wrapper">
         <div class="container">
+            <!-- Slideshow Section -->
+            <section class="image-box slideshow-container">
+                <img class="mySlides" src="1.jpg">
+                <img class="mySlides" src="2.jpg">
+                <img class="mySlides" src="3.jpg">
+            </section>
+
             <div class="heading">
                 <span class="form-header">JOIN OUR LIBRARY</span>
             </div>
-            <div class="panel panel-danger">
+            <div class="panel panel-danger panel-auth">
                 <div class="panel-heading">SIGNUP FORM</div>
                 <div class="panel-body">
                     <form role="form" method="post" onsubmit="return validateForm()">
@@ -76,6 +125,24 @@ if (isset($_POST['signup'])) {
         <?php if($msg_title != "") { ?>
             showModal('<?php echo $msg_title;?>', '<?php echo $msg_content;?>', '<?php echo $msg_type;?>');
         <?php } ?>
+
+        // Slideshow Logic
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
 
         function togglePassword(fieldId) {
             var field = document.getElementById(fieldId);

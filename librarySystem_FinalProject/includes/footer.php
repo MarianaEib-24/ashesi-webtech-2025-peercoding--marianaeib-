@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                     &copy; 2025 Online Library Management System | <a href="https://github.com/MarianaEib-24/ashesi-webtech-2025-peercoding--marianaeib-" target="_blank">Designed by : Mariana Eib</a>
+                     &copy; 2025 Online Library Management System</a>
                 </div>
             </div>
         </div>

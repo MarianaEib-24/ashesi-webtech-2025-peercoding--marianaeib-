@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
         }
     } else {
         $msg_title = "Login Failed";
-        $msg_content = "Invalid Email or Password.";
+        $msg_content = "Invalid Details"; // Changed to match user request "Invalid Details"
         $msg_type = "error";
     }
 }
@@ -52,7 +52,7 @@ if (isset($_POST['login'])) {
                 <img class="mySlides" src="3.jpg">
             </section>
 
-            <div class="panel panel-info">
+            <div class="panel panel-info panel-auth">
                 <div class="panel-heading">LOGIN FORM</div>
                 <div class="panel-body">
                     <form role="form" method="post">
