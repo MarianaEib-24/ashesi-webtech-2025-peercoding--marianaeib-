@@ -9,7 +9,7 @@ if(isset($_POST['signup'])) {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     
-    // Check if username already exists
+    // check if username already exists
     $sql = "SELECT UserName FROM admin WHERE UserName=:username";
     $query = $dbh->prepare($sql);
     $query->bindParam(':username', $username, PDO::PARAM_STR);
@@ -40,7 +40,6 @@ if(isset($_POST['signup'])) {
 <div class="content-wrapper">
     <div class="container">
         
-        <!-- Slideshow Section (Optional, kept for consistency if desired, or removed for simplicity) -->
         <section class="image-box slideshow-container">
             <img class="mySlides" src="1.jpg">
             <img class="mySlides" src="2.jpg">
@@ -48,7 +47,7 @@ if(isset($_POST['signup'])) {
         </section>
 
         <div class="heading">
-            <span class="form-header">ADMIN REFISTRATION FORM</span>
+            <span class="form-header">ADMIN REGISTRATION FORM</span>
         </div>
 
         <div class="panel panel-info">
@@ -85,7 +84,7 @@ if(isset($_POST['signup'])) {
 <?php include('../includes/footer.php');?>
 
 <script>
-    // Slideshow Logic
+    // slideshow logic
     var slideIndex = 0;
     showSlides();
 

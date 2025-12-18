@@ -1,9 +1,14 @@
 <?php
 // DB credentials.
+// define('DB_HOST', 'localhost');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+// define('DB_NAME', 'library');
+
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'library');
+define('DB_USER', 'mariana.eib');
+define('DB_PASS', 'Sankye05');
+define('DB_NAME', 'webtech_2025A_mariana_eib');
 
 // Establish database connection.
 try {
